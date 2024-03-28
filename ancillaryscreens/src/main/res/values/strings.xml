@@ -99,10 +99,10 @@
     <string name="school_district_label">जिला: %s</string>
     <string name="if_your_school_details_are_incorrect_please_click_here_to_edit">यदि आपके स्कूल का विवरण गलत है, तो कृपया संपादित करने के लिए यहां क्लिक करें।</string>
     <string name="enter_phone_register">सत्यापन के लिए वन टाइम पासवर्ड प्राप्त करने के लिए अपना मोबाइल नंबर दर्ज करें</string>
-    <string name="empty_username"> </string>
-    <string name="otp_sent_successfully_for_username">OTP has been successfully sent to the registered mobile number</string>
-    <string name="name_of_user">name of user</string>
-    <string name="please_select_your_profile">Please select your profile</string>
+    <string name="empty_username" translatable="false" > </string>
+    <string name="otp_sent_successfully_for_username" translatable="false" >OTP has been successfully sent to the registered mobile number</string>
+    <string name="name_of_user" translatable="false">name of user</string>
+    <string name="please_select_your_profile" translatable="false">Please select your profile</string>
     <string name="practice">Practice</string>
     <string name="assessment">आंकलन</string>
     <string name="please_select_assessment">कृपया आंकलन का प्रकार चुनें</string>
