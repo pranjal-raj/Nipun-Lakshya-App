@@ -59,3 +59,12 @@ Remember to check "Enable Google Analytics for this project" in the Step 2.
 
 Run the app, enjoy and contribute!
 
+### Note:
+Credentials to be used
+
+Teacher profile - **9999999999**<br/>
+Examiner profile - **9999999998**<br/>
+Mentor profile - **9999999997**<br/>
+
+Default OTP for the above profile - **9876**
+
