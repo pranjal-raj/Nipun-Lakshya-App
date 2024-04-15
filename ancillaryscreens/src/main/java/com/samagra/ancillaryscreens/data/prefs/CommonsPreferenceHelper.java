@@ -1,5 +1,6 @@
 package com.samagra.ancillaryscreens.data.prefs;
 
+import com.samagra.ancillaryscreens.utils.LocaleConstants;
 import com.samagra.commons.models.Result;
 import com.samagra.ancillaryscreens.data.model.LoginResponse;
 
@@ -72,4 +73,9 @@ public interface CommonsPreferenceHelper {
     Date getLastSyncedAt();
 
     void markDataSynced();
+
+    //Added To Save/Get Locale and make locale changes persistent as well as easily accessible
+    void setLocale(String locale);
+
+    String getLocale();
 }

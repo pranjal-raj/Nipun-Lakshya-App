@@ -51,3 +51,9 @@ object ServerStatusConstants {
     const val NOT_FOUND: String = "404"
     const val SUCCESS: Int = 200
 }
+
+object LocaleConstants {
+    const val CURRENT_LOCALE : String = "app_current_locale"
+    const val LANG_ENGLISH : String = "en"
+    const val LANG_HINDI : String = "hi"
+}

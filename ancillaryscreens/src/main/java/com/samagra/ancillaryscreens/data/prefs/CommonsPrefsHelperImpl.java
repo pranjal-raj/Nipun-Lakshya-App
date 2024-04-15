@@ -14,6 +14,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.samagra.ancillaryscreens.AncillaryScreensDriver;
+import com.samagra.ancillaryscreens.utils.LocaleConstants;
 import com.samagra.commons.models.Result;
 import com.samagra.ancillaryscreens.data.model.LoginResponse;
 import com.samagra.ancillaryscreens.di.ApplicationContext;
@@ -520,5 +521,15 @@ public class CommonsPrefsHelperImpl implements CommonsPreferenceHelper {
     public void markDataSynced() {
         String date = new SimpleDateFormat(Constants.SYNCED_DATE_FORMAT, Locale.getDefault()).format(new Date());
         defaultPreferences.edit().putString(Constants.LAST_SYNCED_AT, date).apply();
+    }
+
+    public void setLocale(String locale)
+    {
+        defaultPreferences.edit().putString(LocaleConstants.CURRENT_LOCALE, locale).apply();
+    }
+
+    public String getLocale()
+    {
+        return defaultPreferences.getString(LocaleConstants.CURRENT_LOCALE, LocaleConstants.LANG_ENGLISH);
     }
 }

@@ -1,5 +1,7 @@
 package com.samagra.parent.di
 
+import android.app.Application
+import android.content.Context
 import com.data.db.dao.ExaminerPerformanceInsightsDao
 import com.data.db.dao.MentorPerformanceInsightsDao
 import com.samagra.parent.network.TeacherInsightsService
@@ -8,6 +10,7 @@ import com.samagra.parent.repository.impl.TeacherPerformanceInsightsRepositoryIm
 import com.samagra.parent.ui.DataSyncRepository
 import com.data.db.dao.TeacherPerformanceInsightsDao
 import com.data.repository.CycleDetailsRepository
+import com.samagra.ancillaryscreens.data.prefs.CommonsPreferenceHelper
 import com.samagra.parent.network.ExaminerInsightsService
 import com.samagra.parent.network.MentorInsightsService
 import com.samagra.parent.repository.ExaminerPerformanceInsightsRepository
@@ -28,11 +31,13 @@ object RepositoryModule {
     @Provides
     fun provideTeacherInsightsRepository(
         service: TeacherInsightsService,
-        dao: TeacherPerformanceInsightsDao
+        dao: TeacherPerformanceInsightsDao,
+        context : Context
     ): TeacherPerformanceInsightsRepository {
         return TeacherPerformanceInsightsRepositoryImpl(
             service,
-            dao
+            dao,
+            context
         )
     }
     @Singleton
@@ -65,6 +70,13 @@ object RepositoryModule {
     @Provides
     fun provideDataSyncRepository(): DataSyncRepository {
         return DataSyncRepository()
+    }
+
+    @Singleton
+    @Provides
+    fun provideContext(application: Application) : Context
+    {
+        return application.applicationContext
     }
 
 }

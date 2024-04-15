@@ -29,7 +29,6 @@ class TeacherInsightsAdapter : RecyclerView.Adapter<TeacherInsightsAdapter.Insig
 
     override fun onBindViewHolder(holder: InsightsViewHolder, position: Int) {
         val item = itemList[position]
-        Timber.tag("djvnjvdnv").d(item.toString())
 
         if (position == 0) {
             holder.viewDivider.visibility = View.VISIBLE

@@ -429,10 +429,12 @@ class AssessmentHomeActivity : BaseActivity<ActivityAssessmentHomeBinding, Asses
 
     private fun changeLanguage() {
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags("en"))
+        prefs.locale = "en"
     }
 
     private fun changeLanguage2() {
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags("hi"))
+        prefs.locale = "hi"
     }
 
     private fun onClickDownloadZip(){
