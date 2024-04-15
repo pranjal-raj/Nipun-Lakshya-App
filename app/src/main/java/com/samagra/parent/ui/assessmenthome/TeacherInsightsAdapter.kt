@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.data.db.models.TeacherPerformanceInsightsItem
 import com.samagra.parent.databinding.ItemInsightBinding
 import com.samagra.parent.databinding.ItemTeacherPerformanceInsightsBinding
+import timber.log.Timber
 
 class TeacherInsightsAdapter : RecyclerView.Adapter<TeacherInsightsAdapter.InsightsViewHolder>() {
 
@@ -28,6 +29,7 @@ class TeacherInsightsAdapter : RecyclerView.Adapter<TeacherInsightsAdapter.Insig
 
     override fun onBindViewHolder(holder: InsightsViewHolder, position: Int) {
         val item = itemList[position]
+        Timber.tag("djvnjvdnv").d(item.toString())
 
         if (position == 0) {
             holder.viewDivider.visibility = View.VISIBLE

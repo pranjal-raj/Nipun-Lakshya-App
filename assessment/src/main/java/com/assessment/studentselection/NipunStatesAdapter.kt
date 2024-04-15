@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.assessment.R
 import com.assessment.databinding.ItemNipunStatesBinding
 import com.data.db.models.Summary
+import timber.log.Timber
 
 class NipunStatesAdapter : ListAdapter<Summary, NipunStatesAdapter.NipunStatesViewHolder>(SummaryDiffCallback()) {
 
@@ -29,6 +30,7 @@ class NipunStatesAdapter : ListAdapter<Summary, NipunStatesAdapter.NipunStatesVi
     }
 
     override fun onBindViewHolder(holder: NipunStatesViewHolder, position: Int) {
+        //Timber.tag("Pranjal-log").d(currentList.toString())
         val studentsNipunSummary = getItem(position)
         holder.binding.apply {
             tvNipunText.text = studentsNipunSummary.label.plus(": ")

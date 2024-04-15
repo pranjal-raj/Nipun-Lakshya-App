@@ -3,7 +3,9 @@ package com.samagra.parent.ui.assessmenthome
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.os.Build
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -11,7 +13,9 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.os.LocaleListCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.samagra.ancillaryscreens.data.prefs.CommonsPrefsHelperImpl
@@ -411,7 +415,24 @@ class AssessmentHomeActivity : BaseActivity<ActivityAssessmentHomeBinding, Asses
                 binding.dl.closeDrawer(GravityCompat.START)
                 openPrivacyPolicy()
             }
+            DrawerOptions.CHANGE_LANGUAGE -> {
+                binding.dl.closeDrawer(GravityCompat.START)
+                changeLanguage()
+            }
+            DrawerOptions.CHANGE_LANGUAGE2->
+            {
+                binding.dl.closeDrawer(GravityCompat.START)
+                changeLanguage2()
+            }
         }
+    }
+
+    private fun changeLanguage() {
+        AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags("en"))
+    }
+
+    private fun changeLanguage2() {
+        AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags("hi"))
     }
 
     private fun onClickDownloadZip(){
@@ -498,6 +519,10 @@ class AssessmentHomeActivity : BaseActivity<ActivityAssessmentHomeBinding, Asses
     override fun onBackPressed() {
         super.onBackPressed()
         onBackHandling()
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
     }
 
 /*

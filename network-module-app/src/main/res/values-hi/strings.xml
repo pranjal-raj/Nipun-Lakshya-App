@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">लॉगर</string>
+    <string name="error_generic_message">कुछ गलत हो गया है! कृपया पुन: प्रयास करें।</string>
+    <string name="error_network_issue">कृपया अपने इंटरनेट कनेक्शन की जाँच करें और पुनः प्रयास करें।</string>
+    <string name="error_request_timed_out">अनुरोध को प्रोसेस करने में बहुत समय लग रहा है। कृपया बाद में पुनः प्रयास करें।</string>
+    <string name="error_message_retry">सर्वर से कनेक्ट करने में असमर्थ। कृपया बाद में पुनः प्रयास करें।</string>
+    <string name="internet_error_description">इंटरनेट से कनेक्ट नहीं है। कृपया इंटरनेट कनेक्शन को सक्रिय करें।</string>
+    <string name="internet_error_heading">कोई इंटरनेट कनेक्शन नहीं</string>
+
+
+
+
+
+
+</resources>

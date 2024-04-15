@@ -104,4 +104,5 @@ abstract class BaseActivity<VB : ViewDataBinding, T : BaseViewModel> : AppCompat
     fun showToast(str: String) {
         Toast.makeText(this, str, Toast.LENGTH_SHORT).show()
     }
+
 }

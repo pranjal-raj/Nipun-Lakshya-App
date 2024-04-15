@@ -606,7 +606,7 @@ class StudentSelectionActivity : BaseActivity<StudentSelectionBinding, StudentSe
         when (month) {
             1 -> setCurrentMonthText(getString(R.string.month_january))
             2 -> setCurrentMonthText(getString(R.string.month_february))
-            3 -> setCurrentMonthText(getString(R.string.month_march))
+            3 -> setCurrentMonthText(getString(com.assessment.R.string.month_march))
             4 -> setCurrentMonthText(getString(R.string.month_april))
             5 -> setCurrentMonthText(getString(R.string.month_may))
             6 -> setCurrentMonthText(getString(R.string.month_june))
@@ -641,7 +641,7 @@ class StudentSelectionActivity : BaseActivity<StudentSelectionBinding, StudentSe
 
         for (i in 1..gradesList.size) {
             //all distinct grades in student listing api - get from db
-            val classTextView = createTextView("कक्षा ${gradesList[i - 1]}")
+            val classTextView = createTextView("${getString(R.string.class_word)} ${gradesList[i - 1]}")
             classTextView.background.setTint(ContextCompat.getColor(this, R.color.white))
             classTextView.setTextColor(ContextCompat.getColor(this, R.color.blue_31328f))
 
@@ -825,6 +825,7 @@ class StudentSelectionActivity : BaseActivity<StudentSelectionBinding, StudentSe
                         }
                         studentAdapter.addAll(list)
                         nipunStatesAdapter.submitList(getNipunStatesSummary(list))
+                        Timber.tag("summary-from-submit").d(getNipunStatesSummary(list).toString())
                     }
                 }
             }

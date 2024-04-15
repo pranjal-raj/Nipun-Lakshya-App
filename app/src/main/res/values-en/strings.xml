@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nipun Lakshya</string>
+    <string name="app_name" translatable="false">Nipun Lakshya</string>
     <string name="unexpected_error_occured">An unexpected error occurred and the app was stopped. Please click on the button below to restart the application.</string>
     <string name="unexpected_error_read_along">It appears that the Read Along test could not be completed. Please try again</string>
     <string name="oh_no">Oh ho!</string>

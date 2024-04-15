@@ -67,4 +67,8 @@ public class AppConstants {
     public static final String ODK_CRITERIA_KEY = "ODK";
 
 //    public static final String ASSESSMENT_WORKFLOW_CONFIG = "assessment_workflow_config";
+
+    public static final String LANG_ENGLISH = "en";
+
+    public static final String LANG_HINDI = "hi";
 }

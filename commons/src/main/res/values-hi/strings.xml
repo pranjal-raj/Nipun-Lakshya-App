@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">सामान्य</string>
+    <string name="storage_runtime_permission_denied_title">स्टोरेज अनुमतियाँ</string>
+    <string name="storage_runtime_permission_denied_desc">इन अनुमतियों के बिना, कलेक्ट आपके फॉर्म तक पहुँच नहीं पा सकता या आपके उत्तर सहेज नहीं सकता। जब आप इन्हें प्रदान करने के लिए तैयार हों, तो ऐप को फिर से खोलें।</string>
+    <string name="location_runtime_permissions_denied_title">स्थान अनुमतियाँ</string>
+    <string name="location_runtime_permissions_denied_desc">इन अनुमतियों के बिना, कलेक्ट आपका स्थान रिकॉर्ड नहीं कर सकता। कृपया जब आप इन्हें प्रदान करने के लिए तैयार हों, तो फिर से प्रयास करें।</string>
+    <string name="ok">ठीक है</string>
+    <string name="notification_error">सूचना पाठ दिखाने में त्रुटि</string>
+    <string name="notification_channel_name">सामान्य सूचनाएं</string>
+    <string name="upload_results">आपका फ़ॉर्म निम्नलिखित स्थिति के साथ प्रस्तुत किया गया है</string>
+    <string name="please_wait">कृपया प्रतीक्षा करें</string>
+    <string name="low_on_space_error">अंतरिक्ष कम है</string>
+    <string name="dialog_ok">ठीक है</string>
+    <string name="permission_required_text">अनुमति आवश्यक है</string>
+</resources>

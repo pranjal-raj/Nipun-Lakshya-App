@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getString
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.assessment.R
@@ -77,7 +78,8 @@ class StudentAdapter(
                     val context = root.context
                     tvStudentName.text = studentItem.name
                     tvStudentRollNo.text = studentSharedViewModel.getStudentRollNoText(studentItem)
-                    tvStudentLastAssessmentDate.text = studentSharedViewModel.getLastAssessmentDateText(studentItem)
+                    val lastAssessedDate = context.getString(R.string.last_assessment, studentSharedViewModel.getLastAssessmentDateText(studentItem) )
+                    tvStudentLastAssessmentDate.text = lastAssessedDate
                     cardColor.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
 
                     val cardColorState = studentSharedViewModel.getColorForState(studentItem.status)

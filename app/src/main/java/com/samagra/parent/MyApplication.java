@@ -9,12 +9,16 @@ import android.app.Application;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.LocaleList;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
 import androidx.lifecycle.ProcessLifecycleOwner;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.chatbot.model.ChatbotUrlResponseObject;
 import com.chuckerteam.chucker.api.ChuckerInterceptor;
@@ -72,6 +76,7 @@ import org.odk.collect.android.application.Collect;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 import javax.inject.Inject;
 
@@ -86,6 +91,7 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import timber.log.Timber;
+import timber.log.Timber.DebugTree;
 
 
 /**
@@ -107,6 +113,8 @@ public class MyApplication extends Collect implements MainApplication, Lifecycle
     private EventBus rxEventBus = null;
     private static final CompositeDisposable compositeDisposable = new CompositeDisposable();
     public static boolean isOnline = true;
+
+    private LocaleVM viewModel;
 
     @Inject
     NLDatabase nlDatabase;
@@ -175,6 +183,9 @@ public class MyApplication extends Collect implements MainApplication, Lifecycle
         });
         Realm.init(this);
         downloadURLsRemoteConfig();
+
+        //Locale VM
+       // viewModel = new ViewModelProvider(this).get(LocaleVM.class)
     }
 
     private void registerEventsTOGetNetworkStates() {
@@ -185,7 +196,7 @@ public class MyApplication extends Collect implements MainApplication, Lifecycle
 
     private void initialiseLoggingComponent() {
         if (BuildConfig.DEBUG) {
-            Timber.plant(new Timber.DebugTree());
+            Timber.plant(new Timber.DebugTree()); //Timber Known Issue with this Android Studio version
         } else {
             Timber.plant(new CrashReportingTree());
         }
@@ -570,6 +581,12 @@ public class MyApplication extends Collect implements MainApplication, Lifecycle
             FirebaseCrashlytics.getInstance().recordException(e);
             System.exit(0);
         }
+    }
+
+    public void setLocale( Locale locale)
+    {
+        AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(locale.toLanguageTag()));
+
     }
 
 }

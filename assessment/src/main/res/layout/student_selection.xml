@@ -61,10 +61,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/viewDivider"
             android:layout_marginTop="@dimen/margin_20dp"
+            android:padding="20dp"
             android:id="@+id/clClassesButtons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".MainActivity">
+           >
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

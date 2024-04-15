@@ -64,7 +64,7 @@
                 android:layout_height="36dp"
                 android:background="@drawable/ic_rect_border_student_item"
                 android:gravity="center"
-                android:text="आकलन करें !"
+                android:text="@string/do_assessment"
                 android:textColor="@color/blue_2e3192"
                 android:textSize="@dimen/text_size_extra_small"
                 android:textStyle="bold"

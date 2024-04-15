@@ -59,11 +59,14 @@ fun addItems(options: java.util.ArrayList<DrawerItem>, context: Context): java.u
 
 fun addItemsForTeachers(options: ArrayList<DrawerItem>, context: Context): ArrayList<DrawerItem> {
     options.add(DrawerItem(context.getString(R.string.logout),R.drawable.ic_logout,DrawerOptions.LOGOUT,true))
+    options.add(DrawerItem(context.getString(R.string.change_language),R.drawable.ic_change_language,DrawerOptions.CHANGE_LANGUAGE,true))
+    options.add(DrawerItem("Hindi",R.drawable.ic_change_language,DrawerOptions.CHANGE_LANGUAGE2,true))
     if (BuildConfig.DEBUG)
      options.add(DrawerItem("Download zip",R.drawable.ic_download,DrawerOptions.ZIP,true))
     return options
 }
 
+//Never Used
 fun DrawerLayout.setBodyForTeacher(context: Context, onItemClick : (item : DrawerItem) -> Unit){
     val options  = ArrayList<DrawerItem>()
     // true if need drawer options enabled
@@ -84,7 +87,9 @@ enum class DrawerOptions {
     HELP,
     LOGOUT,
     ZIP,
-    PRIVACY_POLICY
+    PRIVACY_POLICY,
+    CHANGE_LANGUAGE,
+    CHANGE_LANGUAGE2
 }
 
 inline fun <T : Fragment> T.withArgs(argsBuilder: Bundle.() -> Unit): T =

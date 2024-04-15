@@ -1,5 +1,8 @@
 package com.assessment.studentselection
 
+import android.app.Application
+import androidx.core.content.ContextCompat.getString
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import com.assessment.R
 import com.data.db.models.helper.StudentWithAssessmentHistory
@@ -26,6 +29,6 @@ class StudentSharedViewModel: ViewModel() {
 
     fun getStudentRollNoText(studentItem: StudentWithAssessmentHistory) = "(${studentItem.rollNo})"
 
-    fun getLastAssessmentDateText(studentItem: StudentWithAssessmentHistory) = "आखरी आकलन : ${convertDateToString(studentItem.last_assessment_date)}"
+    fun getLastAssessmentDateText(studentItem: StudentWithAssessmentHistory) = convertDateToString(studentItem.last_assessment_date)
 
 }

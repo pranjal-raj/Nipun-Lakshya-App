@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "170662169523",
+    "project_id": "samagra-41d5d",
+    "storage_bucket": "samagra-41d5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170662169523:android:1047beb8539735ec9059c6",
+        "android_client_info": {
+          "package_name": "org.odk.collect.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTy_J3t_35qX14-i_GGWsyY9s1l_tKQdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170662169523:android:f994b29420ef7d569059c6",
+        "android_client_info": {
+          "package_name": "org.samagra.missionPrerna"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTy_J3t_35qX14-i_GGWsyY9s1l_tKQdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

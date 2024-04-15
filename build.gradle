@@ -2,6 +2,9 @@
 apply from: 'secrets.gradle'
 
 buildscript {
+    ext {
+        agp_version = '8.1.0'
+    }
     ext.kotlin_version = '1.8.0'
     ext.apolloVersion = '2.3.1'
     repositories {
@@ -17,7 +20,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath "com.android.tools.build:gradle:$agp_version"
         classpath 'com.google.gms:google-services:4.3.10'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath("com.apollographql.apollo:apollo-gradle-plugin:2.5.14")

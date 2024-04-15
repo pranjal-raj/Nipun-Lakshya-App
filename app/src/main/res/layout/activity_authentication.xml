@@ -86,7 +86,7 @@
                                 android:layout_marginTop="@dimen/margin_8dp"
                                 android:textStyle="bold"
                                 android:text="@string/person_auth_screen"
-                                android:textSize="@dimen/text_size_36sp" />
+                                android:textSize="@dimen/text_size_extra_large" />
 
                             <TextView
                                 style="@style/text_title_style"
